@@ -5,7 +5,9 @@
   "main": "index.js",
   "directories": "./lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -18,11 +20,13 @@
     "jetbrains"
   ],
   "dependencies": {
-    "mocha": ">=1.13.0"
+    "mocha": ">=1.13.0",
+    "snyk": "^1.192.4"
   },
   "author": "travis jeffery",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/travisjeffery/mocha-teamcity-reporter/issues"
-  }
+  },
+  "snyk": true
 }
